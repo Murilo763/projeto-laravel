@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\InstrutoresController;
 use App\Http\Controllers\AlunosController;
 use App\Http\Controllers\TreinosController;
+use App\Http\Controllers\EntrarController;
 
 
 /*
@@ -38,6 +39,10 @@ Route::get('/treinos/{alunos}/index', [TreinosController::Class, 'index'])->name
 Route::get('/treinos/index', [TreinosController::Class, 'index'])->name('treinos.index.2');
 
 Route::get('treinos/{treino}/edit', [TreinosController::Class, 'edit'])->name('treinos.edit');
+
+Route::get('/entrar', [EntrarController::Class, 'index'])->name('entrar.index');
+
+Route::post('/entrar', [EntrarController::CLass, 'entrar'])->name('entrar.entrar');
 
 
 

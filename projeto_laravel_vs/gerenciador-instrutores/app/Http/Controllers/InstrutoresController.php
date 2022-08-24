@@ -51,4 +51,9 @@ class InstrutoresController extends Controller
 
         return to_route('instrutores.index')->with('mensagem.sucesso', "Instrutor '{$instrutore->nome}' atualizado!");
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }
