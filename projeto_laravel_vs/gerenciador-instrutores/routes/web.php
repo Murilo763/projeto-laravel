@@ -5,6 +5,7 @@ use App\Http\Controllers\InstrutoresController;
 use App\Http\Controllers\AlunosController;
 use App\Http\Controllers\TreinosController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +38,7 @@ Route::get('/treinos/{alunos}/index', [TreinosController::Class, 'index'])->name
 Route::get('/treinos/index', [TreinosController::Class, 'index'])->name('treinos.index.2');
 
 Route::get('treinos/{treino}/edit', [TreinosController::Class, 'edit'])->name('treinos.edit');
+
 
 
 

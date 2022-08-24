@@ -1,8 +1,9 @@
 <x-layout titulo="Lista de Instrutores">
-<a href="{{route('instrutores.create')}}" class="btn btn-primary mb-2">Adicionar novo Instrutor</a>
-<a href="{{route('alunos.create')}}" class="btn btn-primary mb-2">Adicionar Aluno</a>
-<a href="{{route('treinos.create')}}" class="btn btn-primary mb-2">Adicionar Treino para um Aluno</a>
-
+<div class="d-flex justify-content-center">
+<a href="{{route('instrutores.create')}}" class="btn btn-primary mt-5 mb-5 m-2">Adicionar novo Instrutor</a>
+<a href="{{route('alunos.create')}}" class="btn btn-primary mt-5 mb-5 m-2">Adicionar Aluno</a>
+<a href="{{route('treinos.create')}}" class="btn btn-primary mt-5 mb-5 m-2">Adicionar Treino para um Aluno</a>
+</div>
 @isset($mensagemSucesso)
 <div class="alert alert-success">
   {{ $mensagemSucesso }}
