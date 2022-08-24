@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class EntrarController extends Controller
 {
@@ -12,7 +13,7 @@ class EntrarController extends Controller
     }
 
     public function entrar(Request $request)
-{
+    {
     if (!Auth::attempt($request->only(['email', 'password']))) {
         return redirect()
             ->back()
@@ -21,5 +22,6 @@ class EntrarController extends Controller
 
     return redirect()->route('instrutores.index');
 
-}
+    }
+    
 }

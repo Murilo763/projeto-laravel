@@ -45,4 +45,9 @@ class AlunosController extends Controller
 
         return to_route('alunos.index.2')->with('mensagem.sucesso', "Aluno foi removido!");
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

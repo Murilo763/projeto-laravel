@@ -10,6 +10,15 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 </head>
 <body>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-2 d-flex justify-content-between">
+     <a class="navbar navbar-expand-lg" href="{{ route('instrutores.index') }}">Inicio</a>
+     @auth
+     <a href="/sair" class="text-danger">Sair</a>
+     @endauth
+</nav>
+</body>
+</html>
     <div class="container">
         <div class="jumbotron">
         <h1>{{$titulo}}</h1>

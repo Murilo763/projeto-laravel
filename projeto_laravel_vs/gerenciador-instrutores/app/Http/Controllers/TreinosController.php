@@ -65,4 +65,9 @@ class TreinosController extends Controller
 
         return to_route('instrutores.index')->with('mensagem.sucesso', "Treino foi removido!");
     }
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
 }

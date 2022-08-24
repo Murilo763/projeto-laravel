@@ -15,5 +15,8 @@
             <label for="nome" class="form-label">Turno:</label>
             <input type="text" id="turno" name="turno" class="form-control" @isset($turno)value="{{ $turno }}"@endisset>
         </div>
-        <button type="submit" class="btn btn-primary">Salvar</button>
+        <div class="d-flex">
+        <button type="submit" class="btn btn-primary m-2">Salvar</button>
+        <a href="javascript:history.back()" class="btn btn-primary m-2">Voltar</a>
+        </div>
     </form>

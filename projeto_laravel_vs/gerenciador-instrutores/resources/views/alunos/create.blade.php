@@ -17,5 +17,6 @@
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="javascript:history.back()" class="btn btn-primary m-2">Voltar</a>
     </form>
 </x-layout>

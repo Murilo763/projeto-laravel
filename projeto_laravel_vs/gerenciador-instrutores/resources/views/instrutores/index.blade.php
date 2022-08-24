@@ -1,9 +1,27 @@
 <x-layout titulo="Lista de Instrutores">
-<div class="d-flex justify-content-center">
+
+<ul class="list-group">
+<li class="list-group-item">
 <a href="{{route('instrutores.create')}}" class="btn btn-primary mt-5 mb-5 m-2">Adicionar novo Instrutor</a>
+</li>
+<li class="list-group-item">
 <a href="{{route('alunos.create')}}" class="btn btn-primary mt-5 mb-5 m-2">Adicionar Aluno</a>
+</li>
+<li class="list-group-item">
 <a href="{{route('treinos.create')}}" class="btn btn-primary mt-5 mb-5 m-2">Adicionar Treino para um Aluno</a>
-</div>
+</li>
+<li class="list-group-item">
+<a href="{{ route('instrutor.retorno') }}" class="btn btn-primary mt-5 mb-5 m-2">Ver Instrutores em JSON</a>
+</li>
+<li class="list-group-item">
+<a href="{{ route('aluno.retorno2') }}" class="btn btn-primary mt-5 mb-5 m-2">Ver Alunos em JSON</a>
+</li>
+<li class="list-group-item">
+<a href="{{ route('treino.retorno3') }}" class="btn btn-primary mt-5 mb-5 m-2">Ver Treinos em JSON</a>
+</li>
+</ul>
+
+
 @isset($mensagemSucesso)
 <div class="alert alert-success">
   {{ $mensagemSucesso }}
