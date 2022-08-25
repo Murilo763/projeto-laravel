@@ -8,9 +8,6 @@
 </div>
 @endisset
 
-<a href="{{ route('aluno.retorno2') }}" class="btn btn-primary mt-5 mb-5 m-2">Ver dados de Alunos em JSON</a>
-
-
 <table class="table">
   <thead class="thead-dark">
     <tr>
