@@ -56,6 +56,7 @@ class InstrutoresController extends Controller
             'idade' => 'required',
             'turno' => 'required'
         ]);
+        
         $instrutor = Instrutores::create($request->all());
 
 
