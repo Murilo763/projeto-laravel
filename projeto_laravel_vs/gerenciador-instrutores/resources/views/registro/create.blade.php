@@ -1,4 +1,11 @@
 <x-layout titulo="Registrar Novo Usuario">
+
+@isset($mensagemErro)
+<div class="alert alert-danger">
+  {{ $mensagemErro }}
+</div>
+@endisset
+
 <form method="post">
     @csrf
     <div class="form-group">
@@ -16,8 +23,12 @@
         <input type="password" name="password" id="password" required min="1" class="form-control">
     </div>
 
-    <button type="submit" class="btn btn-primary mt-3">
+    <div class="d-flex">
+    <button type="submit" class="btn btn-primary mt-3 m-2">
         Entrar
     </button>
+    <a href="javascript:history.back()" class="btn btn-primary mt-3 m-2">Voltar</a>
+    </div>
+
 </form>
 </x-layout>

@@ -11,13 +11,17 @@ class RegistroController extends Controller
 {
     public function create()
     {
-        return view('registro.create');
+        $mensagemErro = session('mensagem.erro');
+        return view('registro.create', compact('mensagemErro'));
     }
 
     public function store(Request $request)
     {
         $data = $request->except('_token');
         $data['password'] = Hash::make($data['password']);
+        if(User::whereEmail($data['email'])->get()->first()){
+            return redirect()->route('registrar.create')->with('mensagem.erro', 'Email de Usuário já cadastrado!');
+        }
         $user = User::create($data);
 
         Auth::login($user);
