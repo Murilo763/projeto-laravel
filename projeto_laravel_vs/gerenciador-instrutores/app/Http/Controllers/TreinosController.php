@@ -11,7 +11,6 @@ class TreinosController extends Controller
 {
     public function index(Request $request, Alunos $alunos, Treinos $treino)
     {
-          
         $treinos = $alunos->treinos;
         $mensagemSucesso = session('mensagem.sucesso');
         

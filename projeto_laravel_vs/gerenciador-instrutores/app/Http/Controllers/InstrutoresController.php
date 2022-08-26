@@ -22,8 +22,6 @@ class InstrutoresController extends Controller
     public function return_json(Request $request)
     {
         $instrutores = Instrutores::all();
- 
-        
         return response()->json($instrutores, 200);
     }
 
